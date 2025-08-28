@@ -53,9 +53,9 @@ All queries are written in `queries_db.py` using only the data warehouse (no CSV
 
 ###  +2 Extra KPIs
 
-1. **Average Scores by Seniority and Technology**
-   - `avg_scores_by_seniority()`
-   - `avg_scores_by_technology()`
+1. **Total Hires**
+   It identifies how many hired people are over the total candidates 
+
 
 2. **Top Countries by Hire Rate**
    - `top_countries_by_hire_rate()`: Countries with best performance (hires/applications), filtered by minimum applications.
