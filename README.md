@@ -1,6 +1,5 @@
 # workshop-1-ETL
 
-# Workshop 1 - ETL Project
 
 ## Star Schema
 
