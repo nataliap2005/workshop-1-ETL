@@ -77,5 +77,5 @@ All queries are written in `queries_db.py` using only the data warehouse (no CSV
 
 ---
 
-run main.py
-app is running on http://127.0.0.1:8050/
+type python main.py
+the app is running on http://127.0.0.1:8050/
