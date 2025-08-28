@@ -4,7 +4,7 @@
 
 ## Star Schema
 
-![Star Schema](Diagrama_sin_ttulo.drawio_(1).png)
+![Star Schema](starmodel.png)
 
 A **star schema data warehouse** was designed to analyze the **candidate selection process**. The central fact table, `fact_selection`, captures **one evaluated application per date**. It connects to five dimensions:
 
