@@ -1,1 +1,70 @@
 # workshop-1-ETL
+
+# Workshop 1 - ETL Project
+
+## Star Schema
+
+![Star Schema](Diagrama_sin_ttulo.drawio_(1).png)
+
+A **star schema data warehouse** was designed to analyze the **candidate selection process**. The central fact table, `fact_selection`, captures **one evaluated application per date**. It connects to five dimensions:
+
+- `dim_candidate`: who applied
+- `dim_date`: when the evaluation happened
+- `dim_technology`: what technology was applied to
+- `dim_seniority`: role level
+- `dim_country`: where the application came from
+
+This model allows fast and simple aggregations across business categories: technology, year, seniority, and country. It supports both standard and custom KPI requirements without altering the structure.
+
+---
+
+##  ETL Process
+
+The ETL pipeline is designed to be **modular and aligned with the star schema**.
+
+1. **Extract**: Read the CSV using `pandas`, verifying expected columns.
+2. **Transform**:
+   - Apply the hiring rule (both scores ≥ 7).
+   - Clean data: convert types, parse dates.
+3. **Load**:
+   - Dimensions are deduplicated and inserted using `INSERT IGNORE`.
+   - A staging fact table is created and foreign keys are mapped using lookups.
+   - Final fact table is populated after verifying referential integrity.
+
+---
+
+## KPIs
+
+All queries are written in `queries_db.py` using only the data warehouse (no CSV):
+
+###  Mandatory KPIs
+
+1. **Hires by Technology**
+   - `hires_by_technology()`: Number of hires per tech.
+
+2. **Hires by Year**
+   - `hires_by_year()`: Trends over years.
+
+3. **Hires by Seniority**
+   - `hires_by_seniority()`: Hires grouped by role level.
+
+4. **Hires by Country Over Years**
+   - `hires_by_country_over_years(focus=[...])`: Trends by country and year.
+
+###  +2 Extra KPIs
+
+1. **Average Scores by Seniority and Technology**
+   - `avg_scores_by_seniority()`
+   - `avg_scores_by_technology()`
+
+2. **Top Countries by Hire Rate**
+   - `top_countries_by_hire_rate()`: Countries with best performance (hires/applications), filtered by minimum applications.
+
+### Utility KPIs
+
+- `total_hires()`: Total number of hires.
+- `hire_rate_overall()`: Overall hire percentage.
+
+---
+
+
