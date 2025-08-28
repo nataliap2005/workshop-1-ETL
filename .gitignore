@@ -1,0 +1,28 @@
+# Entornos virtuales
+venv/
+.env/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de Jupyter que no necesitas subir
+.ipynb_checkpoints/
+
+# Datos de ejemplo o generados
+*.csv
+*.xlsx
+*.json
+
+# Configuración personal
+.vscode/
+*.log
+
+# Dash / Plotly artefactos
+*.db
+*.bak
+
+# Otros
+.DS_Store
