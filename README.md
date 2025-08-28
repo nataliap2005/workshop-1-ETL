@@ -1,5 +1,16 @@
 # workshop-1-ETL
 
+## Libraries used
+
+| Library                    | Purpose                                                           |
+| -------------------------- | ----------------------------------------------------------------- |
+| **pandas**                 | Data extraction, cleaning, transformation, and table creation     |
+| **mysql-connector-python** | Connection and queries to the MySQL Data Warehouse                |
+| **sqlalchemy**             | Engine creation and SQL execution with pandas                     |
+| **plotly**                 | Data visualizations (bar charts, line charts)                     |
+| **dash**                   | Web app framework to build the interactive dashboard              |
+| **dash\_table**            | Display tables (like Top Countries by Hire Rate) in the dashboard |
+
 
 ## Star Schema
 
