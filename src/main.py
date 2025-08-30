@@ -7,7 +7,7 @@ def main():
     print("Creando BD/tablas…")
     create_db()
     print("Iniciando ETL")
-    run_etl("candidates.csv", ";")
+    run_etl("../data/candidates.csv", ";")
     
     app = create_app()
     app.run(debug=True, port=8050) 

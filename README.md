@@ -12,9 +12,13 @@
 | **dash\_table**            | Display tables (like Top Countries by Hire Rate) in the dashboard |
 
 
+## Pipeline
+
+![Pipeline](/images/pipeline.jpg)
+
 ## Star Schema
 
-![Star Schema](starmodel.png)
+![Star Schema](/images/starmodel.png)
 
 A **star schema data warehouse** was designed to analyze the **candidate selection process**. The central fact table, `fact_selection`, captures **one evaluated application per date**. It connects to five dimensions:
 
