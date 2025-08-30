@@ -12,7 +12,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Datos de ejemplo o generados
-*.csv
 *.xlsx
 *.json
 
